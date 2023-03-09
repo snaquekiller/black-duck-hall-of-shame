@@ -1,0 +1,10 @@
+node_modules/
+.env
+
+# MegaLinter files
+tmp/
+megalinter-reports/
+
+# System files
+.DS_Store
+Thumbs.db

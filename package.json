@@ -1,0 +1,36 @@
+{
+	"name": "black-duck-hall-of-shame",
+	"version": "1.0.0",
+	"description": "Create an all of Shame of all your Blackduck scanned repository",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"lint": "./node_modules/.bin/eslint",
+		"update-dependencies": "npx -y npm-check-updates -i",
+		"clean": "rm -rf ./coverage ./eslint.json ./junit.xml ./megalinter-reports ./test-report.xml",
+		"mega-linter": "npm run clean && npx -y mega-linter-runner -r v6 --flavor javascript --containername mega-linter && npm run mega-linter-clean",
+		"mega-linter-clean": "docker stop mega-linter && docker rm mega-linter"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/snaquekiller/black-duck-hall-of-shame.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/snaquekiller/black-duck-hall-of-shame/issues"
+	},
+	"homepage": "https://github.com/snaquekiller/black-duck-hall-of-shame#readme",
+	"dependencies": {
+		"debug": "^4.3.4",
+		"dotenv": "^16.0.3",
+		"got": "^12.6.0",
+		"lodash": "^4.17.21"
+	},
+	"devDependencies": {
+		"@cspell/dict-fr-fr": "^2.2.1",
+		"eslint": "^8.35.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-plugin-jsonc": "^2.6.0"
+	}
+}

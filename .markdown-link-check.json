@@ -1,0 +1,10 @@
+{
+	"retryOn429": true,
+	"retryCount": 5,
+	"ignorePatterns": [
+		{
+			"pattern": "^https://my-enterprise.app.blackduck.com/*",
+			"reason": "Fake url"
+		}
+	]
+}
