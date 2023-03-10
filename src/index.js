@@ -44,7 +44,7 @@ bd.getBearer().then(() => {
           name: _project.name,
           date: _project.updatedAt,
           // eslint-disable-next-line no-underscore-dangle
-          url: version._meta.href,
+          url: version._meta.href
         };
         const security = version.securityRiskProfile;
         security.counts.forEach((_element) => {
