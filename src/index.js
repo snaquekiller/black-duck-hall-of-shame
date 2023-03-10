@@ -1,7 +1,8 @@
+/* eslint-disable import/extensions */
 import dotenv from 'dotenv';
 import lodash from 'lodash';
-import BlackDuckAPI from './blackDuck';
-import Reporter from './reporter';
+import BlackDuckAPI from './blackDuck.js';
+import Reporter from './reporter.js';
 
 dotenv.config();
 const apiToken = process.env.API_TOKEN;

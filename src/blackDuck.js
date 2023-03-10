@@ -1,5 +1,6 @@
 import debug from 'debug';
 import lodash from 'lodash';
+// eslint-disable-next-line import/no-unresolved
 import got from 'got';
 
 const log = debug('index.js');
