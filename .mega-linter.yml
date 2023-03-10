@@ -1,0 +1,45 @@
+# Configuration file for Mega-Linter
+# See all available variables at https://oxsecurity.github.io/megalinter/configuration/ and in linters documentation
+
+# General
+DEFAULT_BRANCH: master
+IGNORE_GITIGNORED_FILES: true
+LOG_LEVEL: INFO
+PRINT_ALPACA: false
+SHOW_ELAPSED_TIME: true
+
+# Configuration
+APPLY_FIXES:
+  - BASH_SHFMT
+  - JSON_PRETTIER
+  - MARKDOWN_MARKDOWNLINT
+  - YAML_PRETTIER
+DISABLE_LINTERS:
+  # - JAVASCRIPT_STANDARD
+  - JSON_ESLINT_PLUGIN_JSONC
+  - JSON_V8R
+  - MARKDOWN_MARKDOWN_TABLE_FORMATTER
+  # - REPOSITORY_GOODCHECK
+  - SPELL_PROSELINT
+  - SWIFT_SWIFTLINT
+  # - TYPESCRIPT_STANDARD
+DISABLE:
+  - SQL
+
+# BASH
+BASH_SHFMT_ARGUMENTS: -i 2 -sr -ci -bn
+
+# JSON - ESLINT PLUGIN JSONC
+JSON_ESLINT_PLUGIN_JSONC_CONFIG_FILE: .eslintrc.json
+
+# JS, JSX, TS, TSX
+# --> Trick to add these files in other MegaLinter linters, like CSPELL, but not triggering following linters.
+#     Because ESLint is run outside MegaLinter.
+# JAVASCRIPT_ES_ARGUMENTS: --version
+# JSX_ESLINT_ARGUMENTS: --version
+# TSX_ESLINT_ARGUMENTS: --version
+# TYPESCRIPT_ES_ARGUMENTS: --version
+
+# SPELL
+SPELL_CSPELL_ARGUMENTS: --dot --gitignore --exclude "**/gitignore"
+SPELL_MISSPELL_DISABLE_ERRORS: true

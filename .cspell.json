@@ -1,0 +1,28 @@
+{
+	"version": "0.2",
+	"language": "en,fr",
+	"import": ["./node_modules/@cspell/dict-fr-fr/cspell-ext.json"],
+	"ignorePaths": [
+		"**/.git/**",
+		"**/.vscode/**",
+		"**/build/**",
+		"**/dist/**",
+		"**/megalinter-reports/**",
+		"**/node_modules/**",
+		"**/vscode-extension/**",
+		"**/package-lock.json",
+		".*"
+	],
+	"ignoreRegExpList": [],
+	"patterns": [],
+	"words": [
+		"Blackduck",
+		"blackducksoftware",
+		"containername",
+		"hadolint",
+		"markdownlint",
+		"megalinter",
+		"secretlintrc",
+		"shellcheckrc"
+	]
+}
